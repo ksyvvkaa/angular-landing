@@ -1,4 +1,89 @@
 @import 'bootstrap/scss/mixins';
 @import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
+.hero {
+  background-image: url("/assets/img/hero-bg.jpg");
+  background-size: cover;
 
+  &__content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+
+    min-height: 100vh;
+    padding-block: 200px 171px;
+
+    @media (min-width: $desktop-min-width) {
+      padding-block: $header-height-desktop;
+    }
+
+    @include inlinePaddings;
+    @include container;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: $headings-font-weight;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+
+    @media (min-width: $desktop-min-width) {
+      margin-bottom: 50px;
+      font-size: 56px;
+      line-height: 67px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 211px;
+    height: 48px;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 48px;
+
+    font-size: 13px;
+    font-weight: $headings-font-weight;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: $white;
+
+    transition: background-color $animation-speed, color $animation-speed;
+
+    @media (min-width: $desktop-min-width) {
+      width: 241px;
+      height: 56px;
+
+      font-size: 16px;
+      letter-spacing: -0.02em;
+
+      &:hover {
+        background-color: transparent;
+        color: #000;
+        border-color: #000;
+
+        & svg {
+          fill: #000;
+        }
+      }
+    }
+  }
+
+  &__play-icon {
+    width: 15px;
+    height: 15px;
+    transition: fill $animation-speed;
+
+    @media (min-width: $desktop-min-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

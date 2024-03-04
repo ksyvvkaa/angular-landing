@@ -1,1 +1,85 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: $header-height-mobile;
+
+  @include inlinePaddings;
+  @include container;
+
+  @media (min-width: $desktop-min-width) {
+    height: $header-height-desktop;
+  }
+
+  &__logo {
+    width: 108px;
+    height: 25.8px;
+    margin-bottom: 3.2px;
+
+    @media (min-width: $tablet-min-width) {
+      width: 151px;
+      height: 36px;
+      margin-bottom: 3.2px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      width: 187px;
+      height: 44px;
+      margin-bottom: 15.47px;
+    }
+  }
+
+  &__presentation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 160px;
+    height: 32px;
+    border: 1px solid #000;
+    border-radius: 27px;
+
+    font-size: 13px;
+    font-weight: $headings-font-weight;
+    line-height: 24px;
+    letter-spacing: 0em;
+    transition: background-color $animation-speed, color $animation-speed;
+
+    @media (min-width: $desktop-min-width) {
+      width: 203.25px;
+      height: 56px;
+      border-radius: 48px;
+
+      font-size: 16px;
+      letter-spacing: -0.02em;
+
+      &:hover {
+        background-color: #000;
+        color: $white;
+
+        & svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &__download-icon {
+    width: 11px;
+    height: 15px;
+    transition: fill $animation-speed;
+
+    @media (min-width: $desktop-min-width) {
+      width: 16.25px;
+      height: 23px;
+    }
+  }
+}

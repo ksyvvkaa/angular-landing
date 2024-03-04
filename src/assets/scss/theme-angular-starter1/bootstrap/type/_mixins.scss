@@ -1,3 +1,16 @@
+@mixin inlinePaddings {
+  padding-inline: 16px;
+
+  @media (min-width: $desktop-min-width) {
+    padding-inline: 160px;
+  }
+}
+
+@mixin container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
 @mixin h1 {
   font-size: rem-calc(56px);
   line-height: 108%;
