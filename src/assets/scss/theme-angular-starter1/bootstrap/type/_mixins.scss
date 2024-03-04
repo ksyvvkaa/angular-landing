@@ -1,13 +1,9 @@
 @mixin inlinePaddings {
   padding-inline: 16px;
-
-  @media (min-width: $desktop-min-width) {
-    padding-inline: 160px;
-  }
 }
 
 @mixin container {
-  max-width: 1440px;
+  max-width: 1152px;
   margin-inline: auto;
 }
 
