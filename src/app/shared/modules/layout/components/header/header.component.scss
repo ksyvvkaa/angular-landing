@@ -65,8 +65,8 @@
         background-color: #000;
         color: $white;
 
-        & svg {
-          fill: $white;
+        & .header__download-icon {
+          background-image: url("/assets/img/icons/icon-download-white.svg");
         }
       }
     }
@@ -75,7 +75,10 @@
   &__download-icon {
     width: 11px;
     height: 15px;
-    transition: fill $animation-speed;
+    background-image: url("/assets/img/icons/icon-download-black.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image $animation-speed;
 
     @include media-breakpoint-up(tb) {
       width: 16.25px;

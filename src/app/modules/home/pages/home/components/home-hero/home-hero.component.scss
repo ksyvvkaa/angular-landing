@@ -69,8 +69,8 @@
         color: #000;
         border-color: #000;
 
-        & svg {
-          fill: #000;
+        & .hero__play-icon {
+          background-image: url("/assets/img/icons/icon-play-black.svg");
         }
       }
     }
@@ -79,7 +79,10 @@
   &__play-icon {
     width: 15px;
     height: 15px;
-    transition: fill $animation-speed;
+    background-image: url("/assets/img/icons/icon-play-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image $animation-speed;
 
     @include media-breakpoint-up(tb) {
       width: 18px;
