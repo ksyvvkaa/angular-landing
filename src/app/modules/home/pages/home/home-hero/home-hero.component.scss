@@ -13,7 +13,7 @@
     min-height: 100vh;
     padding-block: 200px 171px;
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(tb) {
       padding-block: $header-height-desktop;
     }
 
@@ -29,7 +29,7 @@
     letter-spacing: -0.02em;
     text-align: center;
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(tb) {
       margin-bottom: 50px;
       font-size: 56px;
       line-height: 67px;
@@ -57,7 +57,7 @@
 
     transition: background-color $animation-speed, color $animation-speed;
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(tb) {
       width: 241px;
       height: 56px;
 
@@ -81,7 +81,7 @@
     height: 15px;
     transition: fill $animation-speed;
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(tb) {
       width: 18px;
       height: 18px;
     }

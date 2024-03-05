@@ -24,7 +24,13 @@
     line-height: 29px;
     letter-spacing: 0em;
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 20px;
+      font-size: 32px;
+      line-height: 37px;
+    }
+
+    @include media-breakpoint-up(tb) {
       margin-bottom: 30px;
       font-size: 36px;
       line-height: 43px;
@@ -36,8 +42,8 @@
     row-gap: 17px;
     list-style: none;
 
-    @media (min-width: $desktop-min-width) {
-      row-gap: 22px;
+    @include media-breakpoint-up(tb) {
+      row-gap: 27px;
     }
   }
 
@@ -47,10 +53,14 @@
     line-height: 17px;
     letter-spacing: 0em;
 
-    @media (min-width: $desktop-min-width) {
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include media-breakpoint-up(tb) {
       font-size: 18px;
-      font-weight: 400;
-      line-height: 22px;
+      line-height: 27px;
     }
   }
 }

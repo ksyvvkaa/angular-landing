@@ -2,17 +2,15 @@
 @import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
 
 .stages {
-  display: grid;
+  @include grid;
   row-gap: 40px;
 
   padding-block: 55px;
   @include inlinePaddings;
   @include container;
 
-  @media (min-width: $desktop-min-width) {
-    @include grid;
-    row-gap: 74px;
-
+  @include media-breakpoint-up(tb) {
+    row-gap: 56px;
     padding-block: 100px;
     margin-bottom: 20px;
   }

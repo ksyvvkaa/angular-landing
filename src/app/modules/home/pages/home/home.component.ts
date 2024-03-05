@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, ElementRef, ViewChild } from '@angular/core'
 import { Meta, Title } from '@angular/platform-browser'
 import { ActivatedRoute } from '@angular/router'
 
@@ -12,6 +12,12 @@ import { SsrService } from 'src/app/core/services/ssr.service'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent extends BasePageComponent {
+  @ViewChild('presentation') presentationBlock?: ElementRef
+
+  scrollToPresentation(): void {
+    this.presentationBlock?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   constructor(
     protected override readonly titleService: Title,
     protected override readonly metaService: Meta,
