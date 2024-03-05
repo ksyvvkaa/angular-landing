@@ -1,0 +1,22 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.stages {
+  display: grid;
+  row-gap: 40px;
+
+  padding-block: 55px;
+  @include inlinePaddings;
+  @include container;
+
+  @media (min-width: $desktop-min-width) {
+    @include grid;
+    row-gap: 74px;
+
+    padding-block: 100px;
+  }
+
+  &__item {
+    grid-column: span 4;
+  }
+}

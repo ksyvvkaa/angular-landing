@@ -1,0 +1,15 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.presentation {
+  display: grid;
+  justify-items: center;
+
+  &__poster {
+  }
+
+  &__video {
+    width: 100%;
+    max-height: 100vh;
+  }
+}

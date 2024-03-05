@@ -7,6 +7,12 @@
   margin-inline: auto;
 }
 
+@mixin grid {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 @mixin h1 {
   font-size: rem-calc(56px);
   line-height: 108%;

@@ -1,0 +1,9 @@
+<section class="presentation">
+  <ng-template #poster class="presentation__poster">
+    <img src="assets/img/presentation-poster.jpg" />
+  </ng-template>
+
+  <video *ngIf="false; else poster" class="presentation__video" [volume]="0.1" controls>
+    <source type="video/mp4" src="assets/video/presentation.mp4" />
+  </video>
+</section>

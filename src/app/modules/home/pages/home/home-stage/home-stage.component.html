@@ -1,0 +1,11 @@
+<div class="stage">
+  <div class="stage__number">
+    {{ stage.id < 10 ? '0' + stage.id : stage.id }}
+  </div>
+
+  <h3 class="stage__title">{{ stage.title }}</h3>
+
+  <ul class="stage__list">
+    <li class="stage__item" *ngFor="let task of stage.tasks">{{ task }}</li>
+  </ul>
+</div>

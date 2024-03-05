@@ -1,0 +1,56 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.stage {
+  &__number {
+    width: 63px;
+    height: 37px;
+    padding: 10px 23px 10px 23px;
+    border-radius: 30px;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+
+    @media (min-width: $desktop-min-width) {
+      margin-bottom: 30px;
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 17px;
+    list-style: none;
+
+    @media (min-width: $desktop-min-width) {
+      row-gap: 22px;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+
+    @media (min-width: $desktop-min-width) {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
