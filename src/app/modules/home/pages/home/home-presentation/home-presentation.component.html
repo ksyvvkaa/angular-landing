@@ -1,9 +1,18 @@
 <section class="presentation">
-  <ng-template #poster class="presentation__poster">
-    <img src="assets/img/presentation-poster.jpg" />
+  <ng-template #poster>
+    <div class="presentation__poster">
+      <img src="assets/img/presentation-poster.jpg" />
+
+      <div class="presentation__text">
+        <h2 class="presentation__title">Презентація наживо</h2>
+        <p class="presentation__date">11 березня, о 12:00</p>
+      </div>
+
+      <button class="presentation__play-button" (click)="toggleVideo()"></button>
+    </div>
   </ng-template>
 
-  <video *ngIf="false; else poster" class="presentation__video" [volume]="0.1" controls>
+  <video *ngIf="isVideoPlaying; else poster" (ended)="toggleVideo()" class="presentation__video" [volume]="0.1" controls autoplay>
     <source type="video/mp4" src="assets/video/presentation.mp4" />
   </video>
 </section>

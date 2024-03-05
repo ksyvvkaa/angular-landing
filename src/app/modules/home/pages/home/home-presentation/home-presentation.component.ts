@@ -5,4 +5,10 @@ import { Component } from '@angular/core'
   templateUrl: './home-presentation.component.html',
   styleUrls: ['./home-presentation.component.scss'],
 })
-export class HomePresentationComponent {}
+export class HomePresentationComponent {
+  isVideoPlaying = false
+
+  toggleVideo(): void {
+    this.isVideoPlaying = !this.isVideoPlaying
+  }
+}
