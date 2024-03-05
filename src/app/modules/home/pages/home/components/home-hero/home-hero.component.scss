@@ -82,6 +82,7 @@
     background-image: url("/assets/img/icons/icon-play-white.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: right;
     transition: background-image $animation-speed;
 
     @include media-breakpoint-up(tb) {
