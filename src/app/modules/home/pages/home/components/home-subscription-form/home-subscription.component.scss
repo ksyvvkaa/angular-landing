@@ -1,0 +1,166 @@
+@import 'bootstrap/scss/mixins';
+@import 'src/assets/scss/theme-angular-starter1/bootstrap/variables';
+
+.subscription {
+  background-color: #ffcd4e;
+
+  &__content {
+    @include inlinePaddings;
+    @include container;
+    @include grid;
+    row-gap: 54px;
+    padding-block: 54px 59px;
+
+    @include media-breakpoint-up(tb) {
+      padding-block: 114px 153px;
+    }
+  }
+
+  &__left {
+    @include media-breakpoint-up(sm) {
+      grid-column: 1 / 5;
+    }
+
+    @include media-breakpoint-up(tb) {
+      grid-column: 2 / 7;
+    }
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    @include media-breakpoint-up(tb) {
+      margin-bottom: 24px;
+      font-size: 56px;
+      line-height: 67px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include media-breakpoint-up(tb) {
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__form {
+    @include media-breakpoint-up(sm) {
+      grid-column: 5 / -1;
+    }
+
+    @include media-breakpoint-up(tb) {
+      grid-column: 8 / -2;
+    }
+  }
+
+  &__input {
+    display: block;
+    height: 30px;
+    width: 100%;
+    max-width: 350px;
+
+    padding: 0;
+    padding-inline: 2px;
+    padding-bottom: 4px;
+    margin-bottom: 34px;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    @include media-breakpoint-up(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include media-breakpoint-up(tb) {
+      width: 294px;
+      margin-top: 4px;
+      margin-bottom: 27px;
+      padding-inline: 0;
+    }
+  }
+
+  &__button {
+    width: 184px;
+    height: 48px;
+    padding-left: 4px;
+    border-radius: 40px;
+    border: 2px solid #000;
+    background-color: #000;
+    margin-bottom: 12px;
+    transition: background-color $animation-speed, color $animation-speed;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: $white;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+    }
+
+    @include media-breakpoint-up(tb) {
+      width: 294px;
+      height: 64px;
+      margin-bottom: 21px;
+      padding-left: 0;
+
+      &:hover {
+        background-color: transparent;
+        color: #000;
+      }
+    }
+  }
+
+  &__agreement {
+    margin: 0;
+    max-width: 284px;
+
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0em;
+    }
+
+    @include media-breakpoint-up(tb) {
+      max-width: 258px;
+    }
+  }
+}

@@ -11,6 +11,7 @@ import { HomeHeroComponent } from 'src/app/modules/home/pages/home/components/ho
 import { HomePresentationComponent } from 'src/app/modules/home/pages/home/components/home-presentation/home-presentation.component'
 import { HomeStageComponent } from 'src/app/modules/home/pages/home/components/home-stage/home-stage.component'
 import { HomeStagesComponent } from 'src/app/modules/home/pages/home/components/home-stages/home-stages.component'
+import { HomeSubscriptionComponent } from 'src/app/modules/home/pages/home/components/home-subscription-form/home-subscription.component'
 import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
     HomeStageComponent,
     HomePresentationComponent,
     HomeContactsComponent,
+    HomeSubscriptionComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule],
 })
