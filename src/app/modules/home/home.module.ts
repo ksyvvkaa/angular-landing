@@ -6,6 +6,7 @@ import { CoreModule } from 'src/app/core/core.module'
 import { LayoutModule } from 'src/app/shared/modules/layout/layout.module'
 
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module'
+import { HomeContactsComponent } from 'src/app/modules/home/pages/home/components/home-contacts/home-contacts.component'
 import { HomeHeroComponent } from 'src/app/modules/home/pages/home/components/home-hero/home-hero.component'
 import { HomePresentationComponent } from 'src/app/modules/home/pages/home/components/home-presentation/home-presentation.component'
 import { HomeStageComponent } from 'src/app/modules/home/pages/home/components/home-stage/home-stage.component'
@@ -13,7 +14,14 @@ import { HomeStagesComponent } from 'src/app/modules/home/pages/home/components/
 import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeroComponent, HomeStagesComponent, HomeStageComponent, HomePresentationComponent],
+  declarations: [
+    HomeComponent,
+    HomeHeroComponent,
+    HomeStagesComponent,
+    HomeStageComponent,
+    HomePresentationComponent,
+    HomeContactsComponent,
+  ],
   imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule],
 })
 export class HomeModule {}
