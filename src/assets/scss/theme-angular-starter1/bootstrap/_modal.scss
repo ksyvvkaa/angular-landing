@@ -22,7 +22,7 @@
       padding: 0;
       width: 37.59px;
       height: 36px;
-      background-image: url("/assets/img/icons/icon-close.svg");
+      background-image: url("/assets/img/icons/icon-close-desk.svg");
       background-size: cover;
 
       @include media-breakpoint-down(tb) {
@@ -30,6 +30,7 @@
         right: 35px;
         width: 24px;
         height: 24px;
+        background-image: url("/assets/img/icons/icon-close-mob.svg");
       }
 
       @include media-breakpoint-down(sm) {
