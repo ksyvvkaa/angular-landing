@@ -32,6 +32,13 @@
     @include media-breakpoint-up(tb) {
       padding-block: 64px;
     }
+
+    @include media-breakpoint-down(tb) {
+      &.aos-init {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 
   &__title-icon {

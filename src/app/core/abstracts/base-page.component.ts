@@ -1,6 +1,7 @@
+import AOS from 'aos'
 import { Subscription } from 'rxjs'
 
-import { Component, OnDestroy, OnInit } from '@angular/core'
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core'
 import { Meta, Title } from '@angular/platform-browser'
 
 import { Page } from 'src/app/core/interfaces/page'
@@ -11,13 +12,16 @@ import { PageModel } from 'src/app/shared/modules/page/models/page.model'
 @Component({
   template: '',
 })
-export abstract class BasePageComponent implements OnInit, OnDestroy {
+export abstract class BasePageComponent implements OnInit, OnDestroy, AfterViewInit {
   page?: Page<unknown> | PageModel<unknown>
   data?: unknown
 
   langSubscription?: Subscription
 
   constructor(protected langService: LangService, protected titleService: Title, protected metaService: Meta) {}
+  ngAfterViewInit(): void {
+    AOS.init()
+  }
 
   ngOnInit(): void {
     this.langSubscription = this.langService.langChanged.subscribe(() => {

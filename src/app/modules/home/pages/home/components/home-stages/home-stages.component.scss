@@ -17,5 +17,12 @@
 
   &__item {
     grid-column: span 4;
+
+    @include media-breakpoint-down(tb) {
+      &.aos-init {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 }
