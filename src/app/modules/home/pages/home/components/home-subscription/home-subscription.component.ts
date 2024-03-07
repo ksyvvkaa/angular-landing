@@ -1,6 +1,6 @@
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap'
 
-import { Component } from '@angular/core'
+import { Component, ElementRef, ViewChild } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 import { HomeModalComponent } from 'src/app/modules/home/pages/home/components/home-modal/home-modal.component'
@@ -16,7 +16,9 @@ export class HomeSubscriptionComponent {
       validators: [Validators.required, Validators.email],
     }),
   })
-  emailInput = this.subscriptionForm.get('email')
+  emailControl = this.subscriptionForm.get('email')
+
+  @ViewChild('emailInput') emailInput?: ElementRef
 
   constructor(private modalService: NgbModal) {}
 
@@ -26,7 +28,8 @@ export class HomeSubscriptionComponent {
 
   handleFormSubmit(): void {
     if (this.subscriptionForm.invalid) {
-      this.emailInput?.markAsTouched()
+      this.emailControl?.markAsTouched()
+      this.emailInput?.nativeElement.focus()
 
       return
     }

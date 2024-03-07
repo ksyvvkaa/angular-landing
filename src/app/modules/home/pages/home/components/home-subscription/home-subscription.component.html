@@ -1,7 +1,10 @@
 <section class="subscription">
   <div class="subscription__content">
     <div class="subscription__left">
-      <h2 class="subscription__title">Щотижневі новини</h2>
+      <h2 class="subscription__title">
+        Щотижневі <br />
+        новини
+      </h2>
       <p class="subscription__text">Підпишіться, щоб отримувати листи</p>
     </div>
 
@@ -9,14 +12,15 @@
       <input
         formControlName="email"
         class="subscription__input"
-        [class.error]="this.emailInput?.touched && this.emailInput?.invalid"
+        [class.error]="this.emailControl?.touched && this.emailControl?.invalid"
         type="email"
         placeholder="Ваш email"
+        #emailInput
       />
 
       <div class="subscription__error">
-        <p *ngIf="this.emailInput?.touched && this.emailInput?.errors?.required" class="subscription__error-message">Введіть email</p>
-        <p *ngIf="this.emailInput?.touched && this.emailInput?.errors?.email" class="subscription__error-message">
+        <p *ngIf="this.emailControl?.touched && this.emailControl?.errors?.required" class="subscription__error-message">Введіть email</p>
+        <p *ngIf="this.emailControl?.touched && this.emailControl?.errors?.email" class="subscription__error-message">
           Неправильний формат email
         </p>
       </div>
