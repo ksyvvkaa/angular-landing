@@ -9,6 +9,7 @@ import { LayoutModule } from 'src/app/shared/modules/layout/layout.module'
 import { HomeRoutingModule } from 'src/app/modules/home/home-routing.module'
 import {
   HomeContactsComponent,
+  HomeFormComponent,
   HomeHeroComponent,
   HomeModalComponent,
   HomePresentationComponent,
@@ -28,6 +29,7 @@ import { HomeComponent } from 'src/app/modules/home/pages/home/home.component'
     HomeContactsComponent,
     HomeSubscriptionComponent,
     HomeModalComponent,
+    HomeFormComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, CoreModule, LayoutModule, ReactiveFormsModule],
 })

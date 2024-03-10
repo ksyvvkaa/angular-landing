@@ -1,0 +1,26 @@
+<form (ngSubmit)="submit()" [formGroup]="formGroup" class="form">
+  <input
+    formControlName="email"
+    class="form-input"
+    [class.error]="this.emailControl?.touched && this.emailControl?.invalid"
+    type="email"
+    placeholder="Ваш email"
+    #emailInput
+  />
+
+  <div class="form-error">
+    <p *ngIf="this.emailControl?.touched && this.emailControl?.errors?.required" class="form__error-message">Введіть email</p>
+    <p *ngIf="this.emailControl?.touched && this.emailControl?.errors?.email" class="form__error-message">Неправильний формат email</p>
+    <p *ngIf="this.emailControl?.touched && this.emailControl?.errors?.emailNotUnique" class="form__error-message">
+      Цей email вже використовується
+    </p>
+    <p *ngIf="hasServerError" class="form__error-message">Помилка сервера</p>
+  </div>
+
+  <button [disabled]="isPending" class="form__button" type="submit" aria-label="submit subscription">
+    <div class="loader" *ngIf="isPending; else subscribe"></div>
+    <ng-template #subscribe>Підписатись</ng-template>
+  </button>
+
+  <p class="form__agreement">Даю згоду на обробку та використання персональних даних</p>
+</form>

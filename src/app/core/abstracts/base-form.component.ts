@@ -72,6 +72,7 @@ export abstract class BaseFormComponent implements OnInit, OnDestroy {
       this.send()
     } else {
       this.scrollToError()
+      this.focusInvalidInput()
     }
   }
 
@@ -178,6 +179,15 @@ export abstract class BaseFormComponent implements OnInit, OnDestroy {
           block: 'center',
           behavior: 'smooth',
         })
+      }
+    }, 100)
+  }
+
+  focusInvalidInput(): void {
+    setTimeout(() => {
+      const invalidInput = this.elementRef.nativeElement.querySelector('.error')
+      if (invalidInput) {
+        invalidInput.focus()
       }
     }, 100)
   }

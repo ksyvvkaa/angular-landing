@@ -11,3 +11,5 @@ export * from './home-stage/home-stage.component'
 export * from './home-stages/home-stages.component'
 
 export * from './home-subscription/home-subscription.component'
+
+export * from './home-form/home-form.component'
